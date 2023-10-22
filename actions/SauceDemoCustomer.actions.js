@@ -34,7 +34,4 @@ exports.SauceDemoCustomer = class SauceDemoCustomer {
     await this.page.locator('[data-test="back-to-products"]').click();
   }
 
-  async isAtInventoryPage() {
-    await this.expect(this.page).toHaveScreenshot('expectedInventoryPage.png', { fullPage: true });
-  }
 }

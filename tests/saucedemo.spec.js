@@ -1,4 +1,4 @@
-const { test } = require('../fixtures/sauceDemo.fixture');
+const { test, expect } = require('../fixtures/sauceDemo.fixture');
 
 test('Checkout', async ({ sauceDemoCustomer }) => {
   await sauceDemoCustomer.logsIn();
@@ -6,5 +6,5 @@ test('Checkout', async ({ sauceDemoCustomer }) => {
   await sauceDemoCustomer.goesToCart();
   await sauceDemoCustomer.performsCheckout();
   await sauceDemoCustomer.goesToHome();
-  await sauceDemoCustomer.isAtInventoryPage();  
+  await expect(sauceDemoCustomer.page).toHaveScreenshot('expectedInventoryPage.png', { fullPage: true });
 });
