@@ -8,7 +8,9 @@
   "devDependencies": {
     "@playwright/test": "1.40.1"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "yarn playwright test"
+  },
   "dependencies": {
     "@faker-js/faker": "^7.6.0"
   }
